@@ -1,0 +1,213 @@
+@import "_import";
+@media screen and (max-width: 650px)
+{
+  body {
+    overflow-x: hidden;
+  }
+  /* Navigation Bar */
+  .navbar-main {
+    border-bottom: none;
+    ul {
+      li {
+        display: none;
+      }
+      li.open-nav-responsive {
+        display: block !important;
+      }
+    }
+    .responsive-links {
+      position: absolute;
+      top: 73px;
+      width: 100%;
+      border-top: 3px solid $blue;
+      background-color: #111;
+      z-index: 9;
+      a {
+        @include transition(0.5s);
+        display: block;
+        padding: 14px 18px;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+          background-color: #111;
+        }
+        &:first-child { margin-top: 15px; }
+        &:last-child { margin-bottom: 15px; }
+      }
+    }
+  }
+
+  /* Introducation Section */
+  .intro {
+    .overlay {
+      padding-top: 150px !important;
+    }
+    i.material-icons { display: none !important; }
+    .overlay h1 {
+      font-size: 30px !important;
+      span {
+        font-size: 30px
+      }
+    }
+    p {
+      font-size: 13px;
+      padding: 0 25px;
+      line-height: 1.3em;
+    }
+  }
+
+  /* About Section */
+  .about {
+    h1 { font-size: 30px; }
+    .content {
+      display: block;
+      div {
+        width: 100%;
+        p { max-width: 100%; }
+      }
+    }
+  }
+
+  /* Services Section */
+  .services {
+    display: block;
+    .boxes {
+      display: block !important;
+
+      div {
+        text-align: center !important;
+        width: 100% !important;
+
+      }
+    }
+  }
+
+  /* Work Section */
+  .my-work {
+    padding: 0;
+    .moving {
+      padding: 12px;
+      .controls button {
+        margin: 4px 1px !important;
+      }
+    }
+    .works .def-work-div {
+      .sub-work {
+        display: block !important;
+        .flexed { width: 100%; margin: 12px 0 !important; }
+      }
+    }
+  }
+
+  /* Contact Section */
+  .contact {
+    input:not([type='reset']), textarea {
+      width: 95% !important;
+      display: block;
+    }
+  }
+
+  /* Footer */
+  footer {
+    .sections, .follow-me{
+      display: none;
+    }
+    .bottom { h3 { font-size: 18px; } a { display: none; } }
+  }
+}
+
+
+@media (min-width: 450px) and (max-width: 1150px) {
+  /* Navigation Bar */
+  .navbar-main {
+    border-bottom: none;
+    > h1 {
+    }
+    ul {
+      li {
+        display: none;
+      }
+      li.open-nav-responsive {
+        display: block !important;
+      }
+    }
+    .responsive-links {
+      position: absolute;
+      top: 73px;
+      width: 100%;
+      border-top: 3px solid $blue;
+      background-color: #111;
+      z-index: 9;
+      a {
+        @include transition(0.5s);
+        display: block;
+        padding: 14px 18px;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+          background-color: #111;
+        }
+        &:first-child { margin-top: 15px; }
+        &:last-child { margin-bottom: 15px; }
+      }
+    }
+  }
+  .about {
+    .content {
+      display: block;
+      div {
+        width: 95%;
+        img {
+          width: auto;
+          height: auto;
+          margin: 0;
+        }
+      }
+      div.left-side {
+        margin: 0 35px 15px;
+      }
+    }
+  }
+
+  .services {
+    .boxes {
+      div {
+        width: 45%;
+      }
+    }
+  }
+
+  .my-work {
+    padding: 0;
+    .moving {
+      padding: 12px;
+      .controls button {
+        margin: 4px 1px !important;
+      }
+    }
+    .works .def-work-div {
+      .sub-work {
+        display: block;
+        .flexed { width: 100%; margin: 12px 0; }
+      }
+    }
+  }
+
+  .contact {
+    form {
+      input:not([type='reset']), textarea {
+        width: 95% !important;
+        margin: 10px auto;
+      }
+    }
+  }
+
+  /* Footer */
+  footer {
+    .sections, .follow-me{
+      display: none;
+    }
+    .bottom { h3 { font-size: 18px; } a { display: none; } }
+  }
+
+}

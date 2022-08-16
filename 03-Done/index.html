@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo-main-color.png">
+  <title>Abdulrahman - Template #03</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/resets.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src='js/jquery-3.1.1.min.js'></script>
+  <script src='js/main.js'></script>
+</head>
+<body>
+
+  <!-- Start Navigation Bar -->
+    <nav class="navbar-main">
+      <h1><img src='logo-main-color.png'>Abdulrahman</h1>
+      <ul>
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#my-work">My Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#footer">Social media</a></li>
+        <li class='open-nav-responsive' style='display: none;'><a href="#"><i class='fa fa-bars'></i></a></li>
+      </ul>
+      <div class="responsive-links" style='display: none;'>
+        <a href="#intro">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">My work</a>
+        <a href="#my-work">Contact</a>
+        <a href="#contact">Social media</a>
+      </div>
+    </nav>
+  <!-- End Navigation Bar -->
+
+  <!-- Start #1 Section - ( Introducation ) -->
+    <div class="intro" id="intro">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>Abdulrahman's <span>Template</span></h1>
+        <p>This is An HTML5 Template With Using SCSS, JQuery and My Own Framework! Framework is very sample file using css i use it for save time</p>
+        <button class='btn btn-success'>Contact with me</button>
+        <button class='btn btn-primary'>Some info About me</button>
+      </div>
+      <i class="fa fa-angle-double-down"></i>
+    </div>
+  <!-- End #1 Section - ( Introducation ) -->
+
+  <!-- Start #2 Section - ( About me ) -->
+    <section class="about" id="about">
+      <h1>Some words about me !</h1>
+      <div class="content">
+        <div>
+          <i class='material-icons'>person</i>
+          <h2>Control themes</h2>
+          <p>Creating your themes from perview with best layout, And Responsive with all Devices Choose what you need from services now and feel good!</p>
+          <button>Choose a service!</button>
+        </div>
+
+        <div>
+          <i class='material-icons'>add_shopping_cart</i>
+          <h2>Control Payments</h2>
+          <p>Control your payments with all ways and with simple steps using the <strong>API's</strong> of Payments ways like paypal, master card, etc...</p>
+          <button>Get started now</button>
+        </div>
+      </div>
+    </section>
+  <!-- End #2 Section - ( About me ) -->
+
+  <hr style='border: 1px solid #f1f1f1'>
+
+  <!-- Start #3 Section - ( Services ) -->
+    <section class="services" id="services">
+      <h1>What i serve - My Services</h1>
+      <div class="boxes">
+
+        <!-- First Service -->
+        <div>
+          <img src="pictures/008-target.png">
+          <h2>Manage users</h2>
+          <p>
+            You can now manage you users of your website with best control panel
+            You can order the advanced control panel and the sample control panel
+            with easy steps you can order your website now !
+          </p>
+        </div>
+
+        <!-- Second Service -->
+        <div>
+          <img src="pictures/030-shield.png">
+          <h2>Protected website</h2>
+          <p>
+            You can order a shield framework to make your website more protected and
+            prevent the injections with best ways now you 'll have best website
+            #1 Protected - #2 Full Control - #3 Free Technical Support
+          </p>
+        </div>
+
+        <!-- Third Service -->
+        <div>
+          <img src="pictures/035-globe.png">
+          <h2>Support Languages</h2>
+          <p>
+            You can find your website with more one language like Arabic, English
+            France, Spanish, And More And The Translation is the best you 'll
+            Have Ever seen, You 'll Find your website look very successfully
+          </p>
+        </div>
+
+        <!-- Forth Service -->
+        <div>
+          <img src="pictures/051-cash.png">
+          <h2>Cash Way</h2>
+          <p>
+            You 'll pay the cost of ordered project after testing website
+            If you don't like the website we return back the website to us
+            But we hope the website like you and you enjoy control !
+          </p>
+        </div>
+
+        <!-- Fifth Service -->
+        <div>
+          <img src="pictures/059-briefcase.png">
+          <h2>Best Design</h2>
+          <p>
+            You 'll work with best developers, designers from all over the world.
+            Designers, Developers Have Best Certificate From Best Colleges.
+            And They Have Alot Of Experience.
+          </p>
+        </div>
+
+        <!-- Sixth Service -->
+        <div>
+          <img src="pictures/070-megaphone.png">
+          <h2>Distribution Website</h2>
+          <p>
+            After finishing website and you paid the cost of project,
+            We have to distribution your own website to earn some money.
+            And you get back the cost of project again!
+          </p>
+        </div>
+
+      </div>
+    </section>
+  <!-- End #3 Section - ( About ) -->
+
+  <!-- Start #4 Section - ( My Work ) -->
+    <section class="my-work" id="my-work">
+
+      <h1>My Best Work</h1>
+
+      <section class='moving'>
+        <div class="controls">
+          <button id='main-btn-all' type="button">All</button>
+          <button data-filter='webdes' type="button">Web Design</button>
+          <button data-filter='webdev' type="button">Web Development</button>
+          <button data-filter='scripts' type="button">Scripts</button>
+          <button data-filter='codepen' type="button">Codepen.io</button>
+        </div>
+      </section> <hr>
+
+      <section class="works">
+
+        <div class='def-work-div' data-get='webdes'>
+
+          <div class='sub-work'>
+
+            <div class='flexed'>
+              <h3>Bootstrap Template</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML5, CSS3, JQuery, SASS</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>View Template</button>
+            </div>
+
+            <div class='flexed'>
+              <h3>HTML5 Template #1</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML5, CSS3, JQuery, SASS</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>View Template</button>
+            </div>
+
+            <div class='flexed'>
+              <h3>HTML Template</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, SASS</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>View Template</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class='def-work-div' data-get='webdev'>
+          <div class='sub-work'>
+            <div class='flexed'>
+              <h3>Linux System</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS, PHP, MySQL</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+
+            <div class='flexed'>
+              <h3>Login & Registration</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS, PHP, MySQL</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+
+            <div class='flexed'>
+              <h3>Showing Courses</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS, PHP, MySQL</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+          </div>
+        </div>
+
+        <div class='def-work-div' data-get='scripts'>
+          <div class='sub-work'>
+            <div class='flexed'>
+              <h3>Script #1</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS, PHP, MySQL</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+
+            <div class='flexed'>
+              <h3>Script #2</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS, PHP, MySQL</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+
+            <div class='flexed'>
+              <h3>Script #3</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS, PHP, MySQL</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+          </div>
+        </div>
+
+        <div class='def-work-div' data-get='codepen'>
+          <div class='sub-work'>
+            <div class='flexed'>
+              <h3>Codepen #1</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+
+            <div class='flexed'>
+              <h3>Codepen #2</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+
+            <div class='flexed'>
+              <h3>Codepen #3</h3> <hr>
+              <span><i class='fa fa-star'></i> By using: <span>HTML, CSS, JQuery, JS, SASS</span></span>
+              <span><i class='fa fa-check'></i> Responsive: <span>Yes</span>
+              <p> <i class='fa fa-info'></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class='btn'>Github</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+  <!-- Start #4 Section - ( My Work ) -->
+
+  <!-- Start #6 Section - ( Contact ) -->
+    <div class="contact" id="contact">
+      <h1>Contact me</h1>
+      <form onsubmit='return false' method="post">
+        <input type='text' placeholder="Fullname">
+        <input type='text' placeholder="Phone number">
+        <input type='email' placeholder="Email Address">
+        <textarea placeholder="Contacting Message"></textarea>
+        <button class='material-button blue'>Send message</button>
+        <input class='material-button red' type='reset'>
+      </form>
+    </div>
+  <!-- End #6 Section - ( Contact ) -->
+
+  <!-- Start Footer -->
+    <footer id="footer">
+      <div class='sections'>
+        <div class='left' style='width: 65%'>
+          <h1>This is footer</h1>
+          <p class='simple'>This is simple descrption to know what i can do This is simple descrption to know what i can do This is simple descrption to know what i can do This is simple descrption to know what i can do This is simple descrption to know what i can do</p>
+        </div>
+        <div class='right' style='width: 35%'>
+          <h1>Navigate to</h1>
+          <a href='#'>About me</a>
+          <a href='#'>My Skills</a>
+          <a href='#'>Our Team</a>
+          <a href='#'>Our Services</a>
+        </div>
+      </div>
+
+      <section class="follow-me">
+        <div class="heading" style='width: 80%;'>
+          <h1>Follow me</h1>
+        </div>
+        <div class="social-media" style='width: 20%;'>
+          <a title='Facebook' href='https://www.facebook.com/asaber.25/'><i class='fa fa-facebook'></i></a>
+          <a title='Twitter' href='https://twitter.com/asaber2525'><i class='fa fa-twitter'></i></a>
+          <a title='Github' href='https://github.com/asaber3030'><i class='fa fa-github'></i></a>
+        </div>
+      </section>
+
+      <div class='bottom'>
+        <h3>© Copywrite reserved Abdulrahman Saber</h3>
+        <a href="#">Articles</a>
+      </div>
+    </footer>
+  <!-- Start End -->
+
+</body>
+</html>

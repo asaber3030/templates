@@ -1,0 +1,385 @@
+@import '_import';
+* {
+  scroll-behavior: smooth;
+}
+/* Navigation bar */
+.navbar-main {
+  background-color: #111;
+  border-bottom: 1px solid $blue;
+  display: flex;
+  padding: 0 25px;
+  justify-content: space-around;
+  h1 {
+    align-items: center;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+    color: #aaa;
+    margin-right: 45px;
+    img {
+      width: 35px;
+      height: 35px;
+      margin-right: 5px;
+    }
+  }
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      a {
+        @include transition(0.5s);
+        cursor: pointer;
+        padding: 20px 15px;
+        @include setLight();
+        @include setDisplay(block);
+        font-family: 'Karla', sans-serif;
+        color: #FFF;
+        &:hover { color: #f1f1f1; background-color: $blue; }
+      }
+    }
+    .open-nav-responsive:hover {
+      color: $blue !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+/* #1 Section - ( Introducation ) */
+.intro {
+  background: url('../pictures/i01.jpg') fixed center center no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  text-align: center;
+  color: #FFF;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .content {
+    position: relative;
+    z-index: 100;
+  }
+  h1 {
+    font-weight: 100;
+    font-family: 'Karla', sans-serif;
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: $green;
+    font-weight: bold;
+    span {
+      font-size: 50px;
+      text-transform: capitalize;
+      font-weight: lighter;
+      color: #FFF;
+    }
+  }
+  p {
+    color: #AAA;
+    font-family: 'Ubuntu';
+    line-height: 1.6em;
+  }
+  button {
+    @include font-size(16px);
+    font-family: 'Karla', sans-serif;
+    border: 2px solid #3498db;
+    padding: 8px 25px;
+    margin-top: 18px;
+    margin-right: 8px;
+    color: #3498db;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+    &:hover {
+      background-color: rgba(52, 152, 219, .2);
+    }
+    &:last-of-type {
+      border: 2px solid $green;
+      color: $green;
+      &:hover {
+        background-color: transparentize($green, .8);
+      }
+    }
+  }
+  i {
+    @include transition(0.5s);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3em;
+    line-height: 1.55em;
+    animation: move .8s infinite;
+    cursor: pointer;
+    bottom: 50px;
+    z-index: 99999999;
+  }
+}
+
+/* Start #2 Section - ( About me ) */
+.about {
+  padding: 10px;
+  margin-bottom: 35px;
+  > h1 { @extend %start-section; }
+  .content {
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    div {
+      width: 40%;
+      text-align: center;
+      margin-bottom: 15px;
+      i {
+        font-size: 5em !important;
+        color: #666;
+      }
+      h2 {
+        font-weight: 100;
+        margin: 10px;
+      }
+      p {
+        max-width: 75%;
+        margin: auto;
+      }
+      button {
+        @include transition(.5s);
+        background-color: transparent;
+        border: 2px solid $red;
+        border-radius: 3px;
+        color: $red;
+        padding: 10px 25px;
+        font-family: 'Karla', sans-serif;
+        margin: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: $red;
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+/* Start #3 Section - ( Services ) */
+.services {
+  padding: 10px;
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+  h1 {
+    @extend %start-section;
+  }
+  .boxes {
+    @include setDisplay(flex);
+    @include flex-box(wrap, space-around, center);
+    div {
+      width: 27%;
+      text-align: center;
+      margin-bottom: 35px;
+      padding: 10px;
+      img {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        @include setLight();
+        margin-bottom: 15px;
+        color: #555;
+      }
+      p {
+        line-height: 1.3em;
+        color: #5d5a5a;
+      }
+    }
+  }
+}
+
+/* Start #4 Section - ( My Work ) */
+.my-work {
+  padding: 50px;
+  > h1 { @extend %start-section; }
+  hr {
+    border: .3px solid rgba(208, 208, 208, 0.3);
+    width: 75%;
+    margin: 20px 0
+  }
+  .moving {
+    .controls {
+      background-color: transparent;
+      .active {
+        background-color: #1abc9c;
+      }
+      button {
+        background-color: transparent;
+        margin: 0 4px;
+        padding: 11px 20px;
+        border: 1px solid #1abc9c;
+        font-family: 'Karla', sans-serif;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include transition(.5s);
+        @include border-radius(2.5px);
+        &:hover {
+          background-color: #1abc9c;
+        }
+      }
+    }
+  }
+  .works .def-work-div {
+    display: none;
+    .sub-work {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 28px;
+      .flexed {
+        font-family: 'Karla', sans-serif;
+        width: 31.5%;
+        background-color: #F1F1F1;
+        @include border-radius(3px);
+        padding: 12px;
+        h3 {
+          text-transform: uppercase;
+          font-size: 25px;
+          color: #222;
+          font-weight: lighter;
+        }
+        hr {
+          border: .5px solid rgba(234, 233, 233, 1);
+          margin: 5px 0 15px;
+          width: 100% !important;
+        }
+        > span {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 5px;
+          span { font-weight: lighter; color: grey; }
+        }
+        p {
+          font-weight: lighter;
+          margin-top: 8px;
+        }
+        button {
+          color: $green;
+          border: 1.5px solid $green;
+          padding: 10px 25px;
+          font-weight: bold;
+          font-family: 'Karla', sans-serif;
+          background-color: transparent;
+          margin-top: 10px;
+          &:hover { background-color: $green; color: #FFF; }
+        }
+      }
+    }
+  }
+}
+
+/* Start #6 Section - ( Contact ) */
+.contact {
+  h1 { @extend %start-section; }
+  padding: 10px;
+  text-align: center;
+  form {
+    input:not([type='reset']) {
+      width: 32%;
+      font-family: 'Karla', sans-serif;
+      margin: 10px auto;
+      &:nth-child(3) {
+        display: block;
+        width: 64.5%;
+        margin: 3px auto;
+      }
+    }
+    input:focus,
+    textarea:focus {
+      border-color: $blue;
+    }
+    textarea {
+      display: block;
+      width: 64.5%;
+      font-family: 'Karla', sans-serif;
+      margin: 15px auto;
+      height: 150px;
+    }
+    button { text-align: left; }
+    input[type='reset'] { border: none; }
+  }
+}
+
+/* Start Footer */
+footer {
+  background-color: #EE6E73;
+  color: #fff;
+  .sections {
+    padding: 40px 80px 0;
+    display: flex;
+    h1 {
+      font-family: 'Karla', sans-serif;
+      margin-bottom: 15px;
+      font-weight: lighter;
+    }
+    a {
+      color: #eee;
+      display: block;
+      padding: 2px;
+    }
+    p {
+      max-width: 500px;
+    }
+  }
+  .follow-me {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 80px;
+    margin-top: 15px;
+    background-color: #f37378;
+    div {
+      h1 {
+        @include setLight();
+        color: #eee;
+      }
+      a {
+        color: #000;
+        i {
+          font-size: 1.5em;
+          margin-right: 5px;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          line-height: 1.85em;
+          text-align: center;
+          transition: 0.5s;
+          color: #FFF;
+        }
+      }
+      a i.fa-facebook { background-color: $facebook; }
+      a i.fa-github { background-color: #222; }
+      a i.fa-twitter { background-color: $twitter; }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    background-color: #DF696E;
+    padding: 15px 80px;
+    h3, a { color: #FFF; font-family: 'Roboto', sans-serif; }
+    h3 { width: 80%; font-weight: 100; }
+    a  { width: 20%; }
+  }
+}

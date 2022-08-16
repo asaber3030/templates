@@ -1,0 +1,170 @@
+/* Colors, Mixins, Font Family and Placeholder Selectors */
+@keyframes move {
+  0% {
+    bottom: 50px; }
+  100% {
+    bottom: 70px; } }
+@media screen and (max-width: 650px) {
+  body {
+    overflow-x: hidden; }
+
+  /* Navigation Bar */
+  .navbar-main {
+    border-bottom: none; }
+    .navbar-main ul li {
+      display: none; }
+    .navbar-main ul li.open-nav-responsive {
+      display: block !important; }
+    .navbar-main .responsive-links {
+      position: absolute;
+      top: 73px;
+      width: 100%;
+      border-top: 3px solid #3498db;
+      background-color: #111;
+      z-index: 9; }
+      .navbar-main .responsive-links a {
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        display: block;
+        padding: 14px 18px;
+        color: #fff;
+        cursor: pointer; }
+        .navbar-main .responsive-links a:hover {
+          background-color: #111; }
+        .navbar-main .responsive-links a:first-child {
+          margin-top: 15px; }
+        .navbar-main .responsive-links a:last-child {
+          margin-bottom: 15px; }
+
+  /* Introducation Section */
+  .intro .overlay {
+    padding-top: 150px !important; }
+  .intro i.material-icons {
+    display: none !important; }
+  .intro .overlay h1 {
+    font-size: 30px !important; }
+    .intro .overlay h1 span {
+      font-size: 30px; }
+  .intro p {
+    font-size: 13px;
+    padding: 0 25px;
+    line-height: 1.3em; }
+
+  /* About Section */
+  .about h1 {
+    font-size: 30px; }
+  .about .content {
+    display: block; }
+    .about .content div {
+      width: 100%; }
+      .about .content div p {
+        max-width: 100%; }
+
+  /* Services Section */
+  .services {
+    display: block; }
+    .services .boxes {
+      display: block !important; }
+      .services .boxes div {
+        text-align: center !important;
+        width: 100% !important; }
+
+  /* Work Section */
+  .my-work {
+    padding: 0; }
+    .my-work .moving {
+      padding: 12px; }
+      .my-work .moving .controls button {
+        margin: 4px 1px !important; }
+    .my-work .works .def-work-div .sub-work {
+      display: block !important; }
+      .my-work .works .def-work-div .sub-work .flexed {
+        width: 100%;
+        margin: 12px 0 !important; }
+
+  /* Contact Section */
+  .contact input:not([type='reset']), .contact textarea {
+    width: 95% !important;
+    display: block; }
+
+  /* Footer */
+  footer .sections, footer .follow-me {
+    display: none; }
+  footer .bottom h3 {
+    font-size: 18px; }
+  footer .bottom a {
+    display: none; } }
+@media (min-width: 450px) and (max-width: 1150px) {
+  /* Navigation Bar */
+  .navbar-main {
+    border-bottom: none; }
+    .navbar-main ul li {
+      display: none; }
+    .navbar-main ul li.open-nav-responsive {
+      display: block !important; }
+    .navbar-main .responsive-links {
+      position: absolute;
+      top: 73px;
+      width: 100%;
+      border-top: 3px solid #3498db;
+      background-color: #111;
+      z-index: 9; }
+      .navbar-main .responsive-links a {
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        display: block;
+        padding: 14px 18px;
+        color: #fff;
+        cursor: pointer; }
+        .navbar-main .responsive-links a:hover {
+          background-color: #111; }
+        .navbar-main .responsive-links a:first-child {
+          margin-top: 15px; }
+        .navbar-main .responsive-links a:last-child {
+          margin-bottom: 15px; }
+
+  .about .content {
+    display: block; }
+    .about .content div {
+      width: 95%; }
+      .about .content div img {
+        width: auto;
+        height: auto;
+        margin: 0; }
+    .about .content div.left-side {
+      margin: 0 35px 15px; }
+
+  .services .boxes div {
+    width: 45%; }
+
+  .my-work {
+    padding: 0; }
+    .my-work .moving {
+      padding: 12px; }
+      .my-work .moving .controls button {
+        margin: 4px 1px !important; }
+    .my-work .works .def-work-div .sub-work {
+      display: block; }
+      .my-work .works .def-work-div .sub-work .flexed {
+        width: 100%;
+        margin: 12px 0; }
+
+  .contact form input:not([type='reset']), .contact form textarea {
+    width: 95% !important;
+    margin: 10px auto; }
+
+  /* Footer */
+  footer .sections, footer .follow-me {
+    display: none; }
+  footer .bottom h3 {
+    font-size: 18px; }
+  footer .bottom a {
+    display: none; } }
+
+/*# sourceMappingURL=responsive.css.map */

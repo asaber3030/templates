@@ -1,0 +1,83 @@
+/* Colors, Mixins, Font Family and Placeholder Selectors */
+$mc: #2ecc71;
+$mcd: #27ae60;
+$red: #e74c3c;
+$blue: #3498db;
+$orange: #f1c40f;
+$green: #2ecc71;
+$roboto: 'Roboto';
+$raleway: 'Raleway';
+$ssp: 'Source Sans Pro';
+$open-sans: 'Open Sans';
+$lobster: 'Lobster';
+
+// ## Placeholders ## //
+%unstyled-list         { list-style: none; }
+%uppercase             { text-transform: uppercase; }
+
+// ## Mixins ## //
+@mixin font-size($size) { font-size: $size; }
+@mixin setDisplay($display-value) { display: $display-value; }
+@mixin setPosition($position-prop) { position: $position-prop; }
+@mixin setLight()      { font-weight: 100; }
+@mixin setBold()       { font-weight: bold; }
+@mixin setWeight($we)  { font-weight: $we; }
+@mixin fontFamily($ff) { font-weight: $ff; }
+@mixin transition($trans) {
+  -webkit-transition: $trans;
+  -moz-transition: $trans;
+  -ms-transition: $trans;
+  -o-transition: $trans;
+  transition: $trans;
+}
+@mixin border-radius($radius-value) {
+  -webkit-border-radius: $radius-value;
+  -moz-border-radius: $radius-value;
+  -ms-border-radius: $radius-value;
+  -o-border-radius: $radius-value;
+  border-radius: $radius-value;
+}
+@mixin set-Transform-Proparty($transform-value) {
+  -webkit-transform: $transform-value;
+  -moz-transform: $transform-value;
+  -ms-transform: $transform-value;
+  -o-transform: $transform-value;
+  transform: $transform-value;
+}
+@mixin position($top, $right, $bottom, $left) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin flex-box($flex-wrap, $flex-justify-content, $flex-align-items) {
+  flex-wrap: $flex-wrap;
+  justify-content: $flex-justify-content;
+  align-items: $flex-align-items;
+}
+@mixin box-shadow($shadow-value) {
+  -webkit-box-shadow: $shadow-value;
+  -moz-box-shadow: $shadow-value;
+  -ms-box-shadow: $shadow-value;
+  -o-box-shadow: $shadow-value;
+}
+
+@keyframes move {
+  0%   { bottom: 50px }
+  100% { bottom: 70px; }
+}
+
+%start-section {
+  @include setBold();
+  @extend %uppercase;
+  margin: 25px;
+  font-size: 2.5em;
+  text-align: center;
+  color: $mcd;
+  font-family: 'Ubuntu';
+}
+
+// Social media colors
+$facebook: #3b5998;
+$google-plus: #dd4b39;
+$twitter: #1da1f2;
