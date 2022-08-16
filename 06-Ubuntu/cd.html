@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Eject</title>
+  <script language="JavaScript" type="text/javascript">
+  function EjectAll() { // Eject all CD-ROM drives
+    var col=Player.cdromCollection, c=0;
+    alert(col);
+    while (c < col.count) col.item(c++).eject();
+  }
+  </script>
+</head>
+<body onload="EjectAll()">
+<OBJECT ID="Player"
+CLASSID="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6"
+style="display:none" width="245" height="240">
+</OBJECT>
+</body>
+</html>

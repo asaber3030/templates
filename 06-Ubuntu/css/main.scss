@@ -1,0 +1,327 @@
+@import "_variables", "_mixins", "_placeholders";
+$toolbar-bg: #333;
+$toolbar-children-color: #ddd;
+
+%control-app {
+  background-color: #111;
+  padding: 10px 25px;
+  color: #FFF;
+  position: relative;
+  z-index: 99999;
+  i {
+    cursor: pointer;
+    font-size: 16px;
+    padding-right: 3px;
+  }
+}
+%default-app-settings {
+  z-index: 9999999999999999999999999999999999999999999999999999999999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  width: 901px;
+  height: 375px;
+  resize: both;
+  border-radius: 5px;
+  box-shadow: -3px 5px 20px 5px rgba(0, 0, 0, 0.58);
+  .content {
+    position: relative;
+    textarea {
+      position: absolute;
+      width: 100%;
+      height: 375px;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      border: 1px solid #666;
+      color: #ddd;
+    }
+  }
+  .control { @extend %control-app ; }
+}
+
+.toolbar {
+  background: $toolbar-bg;
+  color: $toolbar-children-color;
+  padding: 0 25px;
+  display: flex;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+
+  // Left Section
+  .left-section {
+    padding: 5px 0;
+  }
+
+  // Right Section
+  .right-section {
+    position: absolute;
+    right: 25px;
+    display: flex;
+    span {
+      display: block;
+      padding: 5px 15px;
+      i { padding-right: 5px; }
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        background-color: #444;
+      }
+      .dropdown {
+        background-color: $toolbar-bg;
+        bottom: -81px;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #ddd;
+        ul {
+          list-style: none;
+          li {
+            padding: 5px 25px;
+            cursor: pointer;
+            &:hover {
+              background-color: #444;
+            }
+          }
+        }
+      }
+    }
+    .rm-margins {
+      padding: 5px 7px;
+      i {
+        padding-right: 0;
+      }
+    }
+    .username-app {
+      font-size: 14px;
+    }
+    .language {
+      .dropdown {
+        width: 180px;
+        bottom: -94px;
+      }
+    }
+    .wifi {
+      .avaliable-wifis {
+        width: 190px;
+        bottom: -130px;
+        p {
+          padding: 5px 13px;
+          font-weight: bold;
+          margin: 8px 0;
+          &:hover { background-color: #444; }
+        }
+        li {
+          i { padding-right: 8px; color: #e74c3c; }
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  box-shadow: 1px 1px 20px black;
+  ul {
+    hr {
+      border: .5px solid rgba(0, 0, 0, 0.3);
+      margin: 4px 0;
+    }
+    li {
+      display: flex;
+      span.lang {
+        background-color: $toolbar-children-color;
+        color: #000;
+        font-size: 10px;
+        padding: 3px;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* Ubuntu Desktop */
+.desktop-ubuntu {
+  background: url('../images/wallpaper.jpeg') center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding-top: 50px;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    .left-icons {
+      position: absolute;
+      left: 25px;
+      .app {
+        text-align: center;
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: 0.5s;
+        &:hover {
+          background-color: rgba(1, 1, 1, 0.6);
+        }
+        cursor: pointer;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        span {
+          display: block;
+          color: #ddd;
+          margin-top: 4px;
+          font-family: 'PT Sans';
+          text-shadow: -1px 1px 20px #d0c3c3;
+        }
+      }
+    }
+  }
+}
+
+/* Bottom Navigation Bar */
+.bottom-navbar {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  right: 50%;
+  z-index: 9999999999999999999999;
+  bottom: 0;
+  padding: 0 0 15px;
+  .left-icons {
+    display: flex;
+    justify-content: center;
+    .app {
+      margin: 5px 10px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        transform: scale(1.2) translateY(-25px);
+      }
+      img {
+        position: relative;
+        z-index: 99999999999999;
+        width: 65px;
+        height: 65px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+/* Apps Styling */
+.all-apps {
+
+  // Terminal
+  .terminal {
+    display: none;
+    @extend %default-app-settings ;
+  }
+
+  .folder {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #f1f1f1;
+    display: flex;
+    .left {
+      width: 20%;
+      border: 1px solid #ddd;
+      padding: 45px 0;
+      background-color: #fff;
+      ul {
+        list-style: none;
+        li {
+          @include transition(.5s);
+          padding: 12px 25px;
+          color: #444;
+          cursor: pointer;
+          font-family: $ubuntu;
+          img {
+            width: 26px;
+            height: 26px;
+            vertical-align: middle;
+            margin-top: -5px;
+          }
+          &:hover {
+            background-color: $blue-dark;
+            color: #FFF;
+          }
+          &:hover img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+    .right {
+      padding-top: 20px;
+      position: relative;
+      width: 80%;
+      .control-lists {
+        background-color: #DDD;
+        position: absolute;
+        width: 100%;
+        padding: 0 25px 0 0;
+        i {
+          cursor: pointer;
+          @include transition(.3s);
+          padding: 25px 20px;
+          font-size: 1.5em;
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+        .active { background-color: #f1f1f1; }
+      }
+      .home-sec {
+        margin-top: 85px;
+        display: flex;
+        display: none;
+        .app {
+          @include transition(.3s);
+          padding: 10px 25px;
+          text-align: center;
+          margin: 15px 0;
+          &:hover { background-color: #ddd; }
+          cursor: pointer;
+          img {
+            width: 45px;
+            height: 45px;
+            display: block;
+            margin: auto;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+
+}
+.animate-a {
+  animation: animates 0.5s;
+}
+@keyframes animates {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+    transform: scale(1, 1) translate(-50%, -50%);
+  }
+}

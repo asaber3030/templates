@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ubuntu Desktop Design</title>
+  <link rel="stylesheet" href="css/resets.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <section class='toolbar'>
+
+    <div class="left-section">
+      <i class='fa fa-linux'></i> Ubuntu Desktop
+    </div>
+
+    <div class='right-section'>
+      <!-- Wifi Network -->
+      <span class='wifi rm-margins'>
+        <i class='fa fa-wifi'></i>
+        <div class="dropdown avaliable-wifis">
+          <p>Available Wifi</p>
+          <ul>
+            <li><i class='fa fa-check-circle'></i> CE-ASaber</li>
+            <li>Mohamed</li>
+            <li>TE-Data</li>
+          </ul>
+        </div>
+      </span>
+
+      <!-- Languages -->
+      <span class="language">
+        <i class='fa fa-globe'></i> En
+        <div class="dropdown languages">
+          <ul>
+            <li><span class='lang'>Ar</span> Arabic</li>
+            <li><span class='lang'>En</span> English</li>
+            <hr>
+            <li><i class='fa fa-plus'></i> Add new</li>
+          </ul>
+        </div>
+      </span>
+
+      <!-- Battery Level -->
+      <span class='rm-margins battery'>
+        <i class='fa fa-battery-half'></i>
+      </span>
+
+      <!-- Date And Time -->
+      <span class='date-and-time center'>
+        <i class='fa fa-calendar'></i>
+        25/2/2002 - 21:22:50
+      </span>
+
+      <!-- The Username at Right Section -->
+      <span class='username-app'>
+        <i class='fa fa-linux'></i> Abdulrahman
+        <div class='dropdown user-settings'>
+          <ul>
+            <li>Settings</li>
+            <li>Shutdown</li>
+            <li>Suspend</li>
+          </ul>
+        </div>
+      </span>
+
+    </div>
+  </section>
+
+  <!-- Desktop App -->
+  <article class="desktop-ubuntu">
+    <section class='overlay'>
+      <div class="left-icons">
+        <div class="app">
+          <img src="images/folder.ico" alt="">
+          <span>Home</span>
+        </div>
+
+        <div class="app">
+          <img src="images/app-store.ico" alt="">
+          <span>App Store</span>
+        </div>
+
+        <div class="app">
+          <img src="images/celandar.ico" alt="">
+          <span>Time Settings</span>
+        </div>
+
+        <div class="app open-cmd">
+          <img src="images/terminal.ico" alt="">
+          <span>Terminal</span>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+
+  <article class="bottom-navbar">
+    <div class="left-icons">
+      <div class="app open-cmd">
+        <img src="images/terminal.ico" alt="">
+      </div>
+      <div class="app">
+        <img src="images/folder.ico" alt="">
+      </div>
+      <div class="app">
+        <img src="images/app-store.ico" alt="">
+      </div>
+    </div>
+  </article>
+
+  <section class='all-apps'>
+
+    <!-- Terminal App ( Command Line [cmd] ) -->
+    <div class="terminal">
+      <div class="control">
+        <i class='material-icons close-cmd' title='Close'>close</i>
+        <i class="material-icons max-cmd" title='Maxmize'>tab</i>
+        <i class="material-icons close-cmd" title='Minmize'>indeterminate_check_box</i>
+      </div>
+      <div class="content">
+        <textarea onkeyup='return false'>username@brand-name: ~ $ </textarea>
+      </div>
+    </div>
+
+    <!-- Folder Home Page -->
+    <div class="folder">
+
+      <!-- Left Folders -->
+      <div class="left">
+        <ul>
+          <li><img src='images/folder-links/home.png'> Home</li>
+          <li><img src='images/folder-links/camera.png'> Pictures</li>
+          <li><img src='images/folder-links/downloads.png'> Downloads</li>
+          <li><img src='images/folder-links/media.png'> Media</li>
+          <li><img src='images/folder-links/docs.png'> Documents</li>
+          <li><img src='images/folder-links/home.png'> Desktop</li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="right">
+
+        <div class="control-lists">
+          <i class='fa fa-table active'></i>
+          <i class='fa fa-list' title='List view'></i>
+        </div>
+
+        <div class="home-sec">
+
+          <div class="app open-cmd">
+            <img src="images/terminal.ico" alt="">
+            <span>Terminal</span>
+          </div>
+
+          <div class="app">
+            <img src="images/celandar.ico" alt="">
+            <span>Calendar</span>
+          </div>
+
+          <div class="app">
+            <img src="images/app-store.ico" alt="">
+            <span>App Store</span>
+          </div>
+
+          <div class="app">
+            <img src="images/chrome.png" alt="">
+            <span>Google Chrome</span>
+          </div>
+
+          <div class="app">
+            <img src="images/folder-links/downloads.png" alt="">
+            <span>Downloads</span>
+          </div>
+
+          <div class="app">
+            <img src="images/folder-links/docs.png" alt="">
+            <span>Documents</span>
+          </div>
+
+          <div class="app">
+            <img src="images/folder-links/media.png" alt="">
+            <span>Music</span>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- .folder -->
+  </section>
+
+  <script src='js/jquery-3.2.1.min.js'></script>
+  <script src='js/main.js'></script>
+</body>
+</html>
