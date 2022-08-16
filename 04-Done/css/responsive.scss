@@ -1,0 +1,285 @@
+/* Responsive file */
+
+// ------------------------------------------------------- \\
+
+/* Navigation Bar Of Mobile */
+#navbar-mob {
+  background-color: #000;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 1px 1px 11px black;
+  .links {
+    i {
+      position: absolute;
+      right: 25px;
+      top: 24px;
+      z-index: 9999;
+      color: #FFF;
+      cursor: pointer;
+    }
+  }
+  h1 {
+    color: #FFF;
+    font-weight: 100;
+    padding: 15px 0 15px 25px;
+    margin-right: 35px;
+    font-family: 'Slabo 27px', serif;
+  }
+  ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #000;
+    right: 0;
+    width: 100%;
+    top: 55px;
+    padding: 15px 0;
+    border-top: 1.5px solid #3498db;
+    direction: rtl;
+    li {
+      color: #FFF;
+      width: 100%;
+      padding: 10px 15px;
+      transition: .3s;
+      cursor: pointer;
+      font-family: 'Poppins', serif;
+      &:hover {
+        background-color: #2980b9;
+      }
+    }
+    .active {
+      background-color: #2980b9;
+    }
+  }
+}
+
+/* Small Screens */
+@media (min-width: 276px) and (max-width: 667.98px) {
+  // Body
+  body { overflow-x: hidden; }
+
+  // Default Classes
+  .hide-small {
+    display: none;
+  }
+
+  // Navigation bars
+  #navbar-mob { display: block !important; }
+  #navbar { display: none !important; }
+
+  // Block Section Defaults
+  .block-section {
+    .def-hr { display: none !important; }
+  }
+
+  // Home Section
+  #home {
+    height: 130vh;
+    > div {
+      padding: 120px 30px;
+      hr { display: none; }
+      input { display: none; }
+      h1 {
+        font-size: 30px !important;
+        span { font-size: 40px !important; }
+      }
+      button { margin-bottom: 15px; }
+    }
+  }
+
+  // About Section
+  #about-us {
+    h1 { margin-bottom: 35px; }
+    .first {
+      display: block;
+      padding: 0 30px;
+      .left-section { width: 100%; ul h3 { display: none; } }
+      .right-section { margin-top: 50px; width: 100%; p { font-size: 16px; } }
+    }
+    .last {
+      display: block;
+      padding: 30px 35px;
+      div {
+        width: 100%;
+        h1      { font-size: 25px; }
+        p       { font-size: 16px; }
+        button  { margin-bottom: 25px; }
+      }
+    }
+  }
+
+  // Services Section
+  #services {
+    section {
+      display: block;
+      padding: 5px;
+      div { width: 100%; }
+    }
+  }
+
+  // Products Section
+  #products {
+    .pricing {
+      display: block;
+      margin: 5px 0 !important;
+      padding: 20px;
+      div {
+        width: 90%;
+        display: block;
+        margin: auto;
+      }
+    }
+    .pricing-info {
+      padding: 10px;
+      display: block;
+      div {
+        width: 100%;
+        h1 { font-size: 22px; }
+        p { font-size: 18px;  max-width: 100% !important;  }
+      }
+    }
+    .more-info {
+      display: block;
+      padding: 15px;
+      .img {
+        width: 99%;
+        margin: 15px auto
+      }
+      div {
+        width: 100% !important;
+        ul {
+          display: block;
+          padding-left: 25px;
+          li { width: 100%; }
+        }
+      }
+      div:first-of-type {
+        text-align: center;
+      }
+    }
+  }
+
+  // Team Section
+  #team {
+    section {
+      display: block !important;
+      padding-left: 50px;
+      div { width: 98% !important; margin: 25px auto !important; }
+    }
+  }
+
+  // Contact Section
+  #contact-us {
+    section {
+      display: block;
+      div {
+        width: 90% !important;
+        margin: 25px auto;
+        padding: 10px
+      }
+      div.info { padding: -50px 30px 0 !important; width: 100% !important; }
+    }
+  }
+
+}
+
+/* Mediuem Screens */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  // Body
+  body { overflow-x: hidden; }
+
+  // Default Classes
+  .hide-small {
+    display: none;
+  }
+
+  // Navigation bars
+  #navbar-mob { display: block !important; }
+  #navbar { display: none !important; }
+
+  // Home Section
+  #home {
+    height: 130vh;
+    > div {
+      padding: 120px 30px;
+      hr { display: none; }
+      input, i { display: none; }
+      h1 {
+        font-size: 40px !important;
+        span { font-size: 50
+
+          //
+
+          px !important; }
+      }
+      button { margin-bottom: 15px; }
+    }
+  }
+
+  // About Section
+  #about-us {
+    h1 { margin-bottom: 35px; }
+    .first {
+      display: block;
+      padding: 0 30px;
+      .left-section { width: 100%; ul h3 { display: none; } }
+      .right-section { margin-top: 50px; width: 100%; p { font-size: 16px; } }
+    }
+    .last {
+      display: block;
+      padding: 30px 35px;
+      div {
+        width: 100%;
+        h1      { font-size: 25px; }
+        p       { font-size: 16px; }
+        button  { margin-bottom: 25px; }
+      }
+    }
+  }
+
+  // Services Section
+  #services {
+    section {
+      padding: 5px;
+      > div { width: 50%; }
+    }
+  }
+
+  // Products Section
+  #products {
+    .pricing {
+      margin: 5px 0 !important;
+      padding: 20px;
+
+    }
+    .pricing-info {
+      padding: 10px;
+      flex-wrap: wrap;
+      > div {
+        width: 90%;
+        h1 { font-size: 22px; }
+        p { font-size: 18px; }
+      }
+    }
+
+    .more-info {
+      padding: 50px 15px;
+      div:first-of-type { width: 95% !important; margin: 20px auto !important; }
+      div:last-of-type { width: 75%; }
+      ul { li { width: 80%; } }
+    }
+  }
+
+  // Team Section
+  #team {
+    section {
+      display: block;
+      div { width: 90%; margin: 25px auto; }
+    }
+  }
+
+}

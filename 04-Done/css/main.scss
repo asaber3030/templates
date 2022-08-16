@@ -1,0 +1,550 @@
+@import '_mixins', '_variables';
+
+/* Default Resets */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+/* Body Resets */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+/* The Background Of Navigation Bar */
+.navbar-bg {
+  background-color: #222 !important;
+  transition: 1s;
+}
+
+//-------------------------------------------------------\\
+
+/* Styling Navigation Bar */
+#navbar {
+  background-color: transparent;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  h1 {
+    color: #FFF;
+    font-weight: 100;
+    padding: 15px 0 15px 25px;
+    margin-right: 35px;
+    font-family: 'Slabo 27px', serif;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      color: #FFF;
+      padding: 20px 15px;
+      cursor: pointer;
+      font-family: 'Poppins', serif;
+    }
+    .active {
+      color: #14b6f5;
+    }
+  }
+}
+
+//-------------------------------------------------------\\
+
+/* Styling Home Section */
+#home {
+  background-image: url('../imgs/intro.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 130vh;
+  position: relative;
+  > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.42);
+    padding-top: 230px;
+    color: #FFF;
+    h1 {
+      font-size: 45px;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 23px;
+      span {
+        color: $blue-light;
+        text-transform: uppercase;
+        font-size: 78px;
+        font-family: 'Dosis', sans-serif;
+      }
+    }
+    hr {
+      width: 0;
+      border: 1.5px solid $blue-dark;
+      margin: auto;
+      margin-bottom: -4px !important;
+      border-radius: 5px;
+      transition: .5s;
+      animation: line-animate 2s forwards;
+      &:last-of-type {
+        margin-bottom: 35px;
+      }
+    }
+    p {
+      color: grey;
+      font-family: 'Dosis', sans-serif;
+      font-size: 20px;
+      margin-top: 25px;
+    }
+    div {
+      position: relative;
+      margin: auto;
+      margin-bottom: 30px;
+      text-align: center;
+      input {
+        margin-top: 35px;
+        padding: 12px 40px;
+        width: 35%;
+        border-radius: 35px;
+        border: none;
+        background-color: #222;
+        color: #FFF;
+        font-family: 'Karla';
+        transition: all .3s;
+        &:focus {
+          box-shadow: -1px -1px 7px #3c5ebd4d, 1px 2px 7px #3c5ebd4d;
+        }
+      }
+      i {
+        position: absolute;
+        left: 452px;
+        bottom: 13px;
+        color: grey;
+      }
+    }
+    button {
+      color: #FFF;
+      cursor: pointer;
+      background-color: #176aa0;
+      border: none;
+      border-radius: 3px;
+      padding: 19px 37px;
+      text-transform: uppercase;
+      transition: .3s;
+      margin-right: 15px;
+      font-family: 'Karla', sans-serif;
+      &:hover { background-color: $blue-dark; }
+      &:last-of-type {
+        background-color: $wet-dark;
+        &:hover { background-color: $wet-light; }
+      }
+    }
+  }
+}
+
+//-------------------------------------------------------\\
+
+/* Styling About Section */
+#about-us {
+  .first {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 85px;
+    text-align: left;
+    .left-section {
+      width: 16%;
+      h3 {
+        color: $blue-dark;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      ul {
+        list-style: none;
+        text-align: right;
+        li {
+          padding: 12px;
+          margin: 5px 0;
+          border-radius: 3px;
+          font-size: 14px;
+          cursor: pointer;
+          color: grey;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bold;
+          text-transform: uppercase;
+          &:hover { background-color: #d3d3d32e; }
+        }
+        li.active {
+          background-color: #d3d3d32e;
+        }
+      }
+    }
+    .right-section {
+      text-align: left;
+      width: 80%;
+      margin-bottom: 60px;
+      div:not([data-list='team']) { display: none; }
+      p {
+        text-align: left;
+        color: #000;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+      h4 {
+        font-size: 30px;
+        text-align: left;
+        color: #8c8383;
+      }
+      i:not([no=def]) {
+        border: 1px solid #f1f1f1;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #b9b6b6;
+        width: 40px;
+        height: 40px;
+        margin: 6px 4px;
+        padding: 5px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.7;
+        &:first-of-type:hover  { border-color: $fb; background-color: $fb; color: #FFF; }
+        &:nth-of-type(2):hover { border-color: $twitter; background-color: $twitter; color: #FFF; }
+        &:nth-of-type(3):hover { border-color: #333; background-color: #333; color: #FFF; }
+        &:nth-of-type(4):hover { border-color: $linkedin; background-color: $linkedin; color: #FFF; }
+      }
+      span {
+        display: block;
+        color: grey;
+        font-family: 'Karla', sans-serif;
+        line-height: 1.8;
+
+        &:first-of-type { margin-top: 12px; }
+      }
+    }
+  }
+
+  // Last Section
+  .last {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eae9e947;
+    border-top: 1px solid #e2dcdc;
+    border-bottom: 1px solid #e2dcdc;
+    padding: 121px 80px;
+    margin-top: 150px 0;
+    font-family: 'Karla', sans-serif;
+    div {
+      width: 48%;
+      h1 {
+        margin: 18px 0;
+        font-size: 35px;
+      }
+      p {
+        line-height: 1.5;
+        max-width: 750px;
+        margin: auto;
+        margin-bottom: 18px;
+      }
+      button {
+        background-color: transparent;
+        border: 1.8px solid #2c3e50;
+        border-radius: 5px;
+        padding: 15px 23px;
+        color: #2c3e50;
+        font-weight: 900;
+        font-family: 'Karla';
+        text-transform: uppercase;
+        &:hover {
+          background-color: $wet-dark;
+          color: #FFF
+        }
+      }
+    }
+  }
+}
+
+//-------------------------------------------------------\\
+
+/* Styling Services Section */
+#services {
+  margin-top: 30px !important;
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 35px;
+    align-items: center;
+    > div {
+      width: 30%;
+      margin-bottom: 15px;
+      padding: 18px;
+      div {
+        padding: 15px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px #bdbdbd;
+      }
+      h1 {
+        font-size: 35px;
+        font-family: 'Slabo 27px', sans-serif;
+        margin: 15px 0
+      }
+      p { font-family: 'Karla', sans-serif; }
+    }
+  }
+}
+
+//-------------------------------------------------------\\
+
+/* Styling Products Section */
+#products {
+  background-color: #f1f1f1;
+  padding-top: 30px !important;
+  .pricing {
+    margin: 25px 0 !important;
+    display: flex;
+    padding: 50px;
+    div {
+      background-color: #FFF;
+      padding: 30px;
+      border-right: 1px solid #f1f1f1;
+      border-top: 3px solid $blue-dark;
+      text-align: center;
+      &:hover { background-color: #f8f8f8; }
+      h3 {
+        font-size: 22px;
+        margin: 15px 0;
+      }
+      h1 {
+        font-size: 45px;
+        font-weight: bold;
+        color: grey;
+        color: #2c3e50;
+        .dollar { font-size: 34px; }
+        .price  { font-size: 20px; }
+      }
+      .info-1 {
+        color: #7f8c8d;
+        font-size: 24px;
+        display: block;
+      }
+      .info-2 {
+        margin-bottom: 15px;
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+        color: #2ecc71;
+      }
+      button {
+        background-color: transparent;
+        border: 1px solid #7f8c8d;
+        color: $blue-light;
+        font-size: 20px;
+        padding: 10px 25px;
+        display: block;
+        font-family: 'Karla', sans-serif;
+        margin: 20px auto;
+        transition: none;
+        &:hover {
+          color: #FFF;
+          background-color: #7f8c8d;
+        }
+      }
+    }
+  }
+  // Pricing Informations
+  .pricing-info {
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    padding: 40px 90px;
+    background-color: #F8F9FD;
+    > div {
+      img {
+        margin: 25px 15px 0;
+      }
+      h1 {
+        font-size: 27px;
+        margin: 15px 14px 3px;
+        color: $wet-dark;
+      }
+      p {
+        margin: 8px 14px 13px;
+        max-width: 61%;
+        display: block;
+      }
+    }
+    button {
+      padding: 15px 25px;
+      margin-top: 35px;
+      font-family: 'Karla', sans-serif;
+    }
+  }
+  // More Info
+  .more-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    text-align: left;
+    background-color: #FFF;
+    div:first-of-type {
+      flex: 1;
+      display: flex;
+
+    }
+    div:last-of-type {
+      flex: 4;
+    }
+    div {
+      img {
+        margin: auto;
+        filter: grayscale(.8);
+      }
+      .lists {
+        display: flex;
+
+        ul {
+          flex: 1;
+        }
+      }
+      h3 { color: $wet-dark; }
+      > span {
+        display: block;
+        margin: 5px 0 15px;
+        span {
+          color: $move-light;
+          font-weight: bold;
+        }
+        a { color: $move-light; }
+      }
+      ul {
+        margin: 0 0 25px 15px;
+        flex-wrap: wrap;
+        li { padding: 5px; }
+      }
+    }
+  }
+}
+
+//-------------------------------------------------------\\
+
+/* Styling Team Section */
+#team {
+  section {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-top: 45px;
+    width: 100%;
+    div {
+      width: fit-content !important;
+      margin: auto;
+      text-align: left;
+      img {
+        width: 271px;
+        height: 271px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      h3, h1 {
+        font-family: 'Karla', sans-serif;
+        padding: 5px;
+      }
+      h3 { color: gray; }
+      h1 { font-size: 35px; }
+      span {
+        text-align: left;
+        display: block;
+        padding: 3px;
+        a {
+          display: block;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: $blue-dark;
+          color: #FFF !important;
+          width: fit-content;
+          i { color: #FFF !important; margin-right: 8px; }
+        }
+        i { color: $blue-dark; }
+      }
+    }
+  }
+}
+
+//-------------------------------------------------------\\
+
+/* Styling Contact Us Section */
+#contact-us {
+  section {
+    display: flex;
+    justify-content: space-between;
+    i { margin-right: 15px; }
+    div {
+      flex: 1;
+      text-align: left;
+      padding: 50px;
+      > hr {
+        width: 65%;
+        margin: 15px 0;
+        border: 1px solid #f1f1f1;
+      }
+      span {
+        display: block;
+        padding: 5px !important;
+        margin: 10px 0;
+        font-weight: bold;
+        font-family: 'Karla', sans-serif;
+      }
+      input, textarea {
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        display: block;
+        font-family: 'Karla', sans-serif;
+        padding: 9px 15px;
+        margin: 10px 0;
+      }
+      textarea { height: 120px; resize: none; }
+      button {
+        @include transition(.2s);
+        border-radius: 80px;
+        padding: 8px 25px;
+        background-color: transparent;
+        border: 2px solid $blue-light;
+        color: $blue-light;
+        font-family: 'Karla', sans-serif;
+        cursor: pointer;
+        &:hover {
+          background-color: transparentize($blue-light, .3);
+          box-shadow: 0px 2px 5px #7fb5da;
+        }
+      }
+    }
+  }
+}
+
+//-------------------------------------------------------\\
+
+/* Styling Footer Section */
+footer {
+  font-family: 'Karla', sans-serif;
+  padding: 18px;
+  color: #FFF;
+  background-color: #111;
+  text-align: center;
+}
+
+.text-center { text-align: center }

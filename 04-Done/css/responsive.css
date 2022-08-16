@@ -1,0 +1,250 @@
+/* Responsive file */
+/* Navigation Bar Of Mobile */
+#navbar-mob {
+  background-color: #000;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 1px 1px 11px black; }
+  #navbar-mob .links i {
+    position: absolute;
+    right: 25px;
+    top: 24px;
+    z-index: 9999;
+    color: #FFF;
+    cursor: pointer; }
+  #navbar-mob h1 {
+    color: #FFF;
+    font-weight: 100;
+    padding: 15px 0 15px 25px;
+    margin-right: 35px;
+    font-family: 'Slabo 27px', serif; }
+  #navbar-mob ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #000;
+    right: 0;
+    width: 100%;
+    top: 55px;
+    padding: 15px 0;
+    border-top: 1.5px solid #3498db;
+    direction: rtl; }
+    #navbar-mob ul li {
+      color: #FFF;
+      width: 100%;
+      padding: 10px 15px;
+      transition: .3s;
+      cursor: pointer;
+      font-family: 'Poppins', serif; }
+      #navbar-mob ul li:hover {
+        background-color: #2980b9; }
+    #navbar-mob ul .active {
+      background-color: #2980b9; }
+
+/* Small Screens */
+@media (min-width: 276px) and (max-width: 667.98px) {
+  body {
+    overflow-x: hidden; }
+
+  .hide-small {
+    display: none; }
+
+  #navbar-mob {
+    display: block !important; }
+
+  #navbar {
+    display: none !important; }
+
+  .block-section .def-hr {
+    display: none !important; }
+
+  #home {
+    height: 130vh; }
+    #home > div {
+      padding: 120px 30px; }
+      #home > div hr {
+        display: none; }
+      #home > div input {
+        display: none; }
+      #home > div h1 {
+        font-size: 30px !important; }
+        #home > div h1 span {
+          font-size: 40px !important; }
+      #home > div button {
+        margin-bottom: 15px; }
+
+  #about-us h1 {
+    margin-bottom: 35px; }
+  #about-us .first {
+    display: block;
+    padding: 0 30px; }
+    #about-us .first .left-section {
+      width: 100%; }
+      #about-us .first .left-section ul h3 {
+        display: none; }
+    #about-us .first .right-section {
+      margin-top: 50px;
+      width: 100%; }
+      #about-us .first .right-section p {
+        font-size: 16px; }
+  #about-us .last {
+    display: block;
+    padding: 30px 35px; }
+    #about-us .last div {
+      width: 100%; }
+      #about-us .last div h1 {
+        font-size: 25px; }
+      #about-us .last div p {
+        font-size: 16px; }
+      #about-us .last div button {
+        margin-bottom: 25px; }
+
+  #services section {
+    display: block;
+    padding: 5px; }
+    #services section div {
+      width: 100%; }
+
+  #products .pricing {
+    display: block;
+    margin: 5px 0 !important;
+    padding: 20px; }
+    #products .pricing div {
+      width: 90%;
+      display: block;
+      margin: auto; }
+  #products .pricing-info {
+    padding: 10px;
+    display: block; }
+    #products .pricing-info div {
+      width: 100%; }
+      #products .pricing-info div h1 {
+        font-size: 22px; }
+      #products .pricing-info div p {
+        font-size: 18px;
+        max-width: 100% !important; }
+  #products .more-info {
+    display: block;
+    padding: 15px; }
+    #products .more-info .img {
+      width: 99%;
+      margin: 15px auto; }
+    #products .more-info div {
+      width: 100% !important; }
+      #products .more-info div ul {
+        display: block;
+        padding-left: 25px; }
+        #products .more-info div ul li {
+          width: 100%; }
+    #products .more-info div:first-of-type {
+      text-align: center; }
+
+  #team section {
+    display: block !important;
+    padding-left: 50px; }
+    #team section div {
+      width: 98% !important;
+      margin: 25px auto !important; }
+
+  #contact-us section {
+    display: block; }
+    #contact-us section div {
+      width: 90% !important;
+      margin: 25px auto;
+      padding: 10px; }
+    #contact-us section div.info {
+      padding: -50px 30px 0 !important;
+      width: 100% !important; } }
+/* Mediuem Screens */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    overflow-x: hidden; }
+
+  .hide-small {
+    display: none; }
+
+  #navbar-mob {
+    display: block !important; }
+
+  #navbar {
+    display: none !important; }
+
+  #home {
+    height: 130vh; }
+    #home > div {
+      padding: 120px 30px; }
+      #home > div hr {
+        display: none; }
+      #home > div input, #home > div i {
+        display: none; }
+      #home > div h1 {
+        font-size: 40px !important; }
+        #home > div h1 span {
+          font-size: 50 px !important; }
+      #home > div button {
+        margin-bottom: 15px; }
+
+  #about-us h1 {
+    margin-bottom: 35px; }
+  #about-us .first {
+    display: block;
+    padding: 0 30px; }
+    #about-us .first .left-section {
+      width: 100%; }
+      #about-us .first .left-section ul h3 {
+        display: none; }
+    #about-us .first .right-section {
+      margin-top: 50px;
+      width: 100%; }
+      #about-us .first .right-section p {
+        font-size: 16px; }
+  #about-us .last {
+    display: block;
+    padding: 30px 35px; }
+    #about-us .last div {
+      width: 100%; }
+      #about-us .last div h1 {
+        font-size: 25px; }
+      #about-us .last div p {
+        font-size: 16px; }
+      #about-us .last div button {
+        margin-bottom: 25px; }
+
+  #services section {
+    padding: 5px; }
+    #services section > div {
+      width: 50%; }
+
+  #products .pricing {
+    margin: 5px 0 !important;
+    padding: 20px; }
+  #products .pricing-info {
+    padding: 10px;
+    flex-wrap: wrap; }
+    #products .pricing-info > div {
+      width: 90%; }
+      #products .pricing-info > div h1 {
+        font-size: 22px; }
+      #products .pricing-info > div p {
+        font-size: 18px; }
+  #products .more-info {
+    padding: 50px 15px; }
+    #products .more-info div:first-of-type {
+      width: 95% !important;
+      margin: 20px auto !important; }
+    #products .more-info div:last-of-type {
+      width: 75%; }
+    #products .more-info ul li {
+      width: 80%; }
+
+  #team section {
+    display: block; }
+    #team section div {
+      width: 90%;
+      margin: 25px auto; } }
+
+/*# sourceMappingURL=responsive.css.map */
