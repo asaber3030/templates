@@ -1,0 +1,181 @@
+$mainFont: "Cairo", sans-serif;
+$mainWeight: 300;
+
+$navHeight: 72px;
+
+$mainColor: #2199f3;
+$mainColorLight: #1787e0;
+
+$sectionBg: #ececec;
+
+$defaultBoxShadow: 0 0 10px #DDD;
+
+$mainTransitionType: ease-in-out;
+$mainDuration: 0.3s;
+$mainTransition: $mainDuration $mainTransitionType;
+
+body {
+  font-family: $mainFont;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+%defaultDisplayFlex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+%defaultDisplayGrid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.clearfix {
+  clear: both;
+}
+
+.section-title {
+  margin: 20px auto;
+  border: 2px solid #000;
+  font-size: 20px;
+  width: fit-content;
+  padding: 5px 25px;
+  position: relative;
+  border-radius: 3px;
+  transition: $mainTransition;
+  &:before {
+    content: "";
+    transition: $mainTransition;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $mainColor;
+  }
+  &:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    transition: $mainTransition;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $mainColor;
+  }
+  &:hover { color: #FFF; transition-delay: .5s }
+  &:hover:before {
+    z-index: -1;
+    animation: left-animate .5s ease-in-out forwards;
+  }
+  &:hover:after {
+    z-index: -1;
+    animation: right-animate .5s ease-in-out forwards;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+// Animations
+@keyframes up-and-down {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: -50px
+  }
+}
+
+@keyframes bouncing {
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes left-animate {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  100% {
+    border-radius: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-animate {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  100% {
+    border-radius: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@keyframes moving-arrow {
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes flashing {
+  0%, 40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
