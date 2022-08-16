@@ -1,0 +1,544 @@
+body {
+  font-family: 'Roboto' !important;
+}
+
+.main-color {
+  color: #2980b9;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #888;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 8px;
+}
+/*
+======================================
+  - Start Navigation Bar :
+======================================
+*/
+.navbar-inverse {
+  background-color: #222;
+  border: none;
+  border-radius: 0;
+  padding: 0 35px;
+  margin-bottom: 0;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #555 !important;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: transparent;
+}
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-family: 'Montserrat', sans-serif;
+  padding: 3px 0 0;
+}
+.navbar-inverse .navbar-brand img { width: 45px; height: 45px;  }
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  background-color: transparent;
+  color: #f1f1f1
+}
+.navbar-inverse .navbar-nav > li > a {
+  transition: .1s;
+  margin-right: 5px;
+  color: #Fff;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #2980b9;
+}
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #555 !important;
+  border-color: #555 !important
+}
+
+/*
+======================================
+  - Start Introduction Section :
+======================================
+*/
+.intro {
+  background-image: url('../imgs/intro.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  color: #FFF;
+  padding: 180px 35px;
+  z-index: 2;
+  position: relative;
+}
+.intro:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .79);
+  z-index: -1;
+}
+.intro .content {
+  z-index: 2;
+}
+.intro h1 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 100;
+  margin: 0 !important;
+  font-size: 50px;
+}
+.intro input {
+  background-color: transparent;
+  border: 1px solid #444;
+  width: 35%;
+  color: gray;
+  margin-bottom: 15px;
+}
+.intro p {
+  font-family: 'Karla', sans-serif;
+  display: block;
+  color: lightgray;
+  margin: 0 0 15px;
+}
+.intro button {
+  background-color: transparent !important;
+  border-radius: 5px;
+  padding: 6px 30px;
+  font-family: 'Karla', sans-serif;
+  border: 1.5px solid #2980b9;
+  color: #2980b9;
+  font-weight: bold;
+  transition: .5s;
+  margin: 2px;
+}
+.intro button:first-of-type { margin-left: 0; }
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus { outline: none; color: #FFF; }
+.intro button:hover { box-shadow: 0px 1px 6px 0px #415de487; background-color: rgba(41, 128, 185, .2) !important; color: #2980b9; border-color: #2980b9; }
+/*
+======================================
+  - Start About Section :
+======================================
+*/
+.about {
+  padding: 40px 0 40px 0;
+  background-color: #F1F1F1;
+}
+.about h1 {
+  color: #555;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+.about h1 span {
+  color: #2980b9
+}
+.about p {
+  font-size: 16px;
+  color: #555;
+  width: 80%;
+  margin: 10px auto;
+  font-family: 'Karla', sans-serif;
+}
+
+/*
+======================================
+  - Start Features Section :
+======================================
+*/
+.features {
+  padding: 30px 0 40px 0;
+}
+.features h1 {
+  color: #555;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 10px !important;
+}
+.features .feat {
+  padding: 30px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+.features .feat:hover { background-color: #f1f1f1; }
+.features .feat:hover span {transform: rotate(-360deg); color: #31b0d5 }
+.features h1 span {
+  color: #2980b9
+}
+.features .feat span {
+  font-size: 35px;
+  color: #444;
+  transition: all .5s ease-in-out;
+}
+
+.features .feat h4 {
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+}
+.features .feat p {
+  line-height: 1.6em;
+  font-family: 'Karla', sans-serif;
+  font-size: 13px;
+}
+
+/*
+======================================
+  - Start Team Section :
+======================================
+*/
+.testimonials {
+  padding-top: 35px;
+  background-color: #f1f1f1;
+  position: relative;
+}
+.testimonials:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 5px;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  background-color: #2980b9;
+}
+.testimonials:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 5px;
+  bottom: 0;
+  border-radius: 8px;
+  right: 0;
+  background-color: #2980b9;
+}
+.testimonials h1 {
+  color: #555;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.testimonials h1 aside {
+  color: #2980b9;
+  display: inline;
+}
+.testimonials p {
+  font-size: 15px;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.5em
+}
+.testimonials span {
+  font-size: 18px;
+  font-weight: bolder;
+  color: #555
+}
+.testimonials .carousel-inner {
+  min-height: 160px
+}
+.testimonials .carousel-indicators {
+  position: static;
+  width: 100%;
+  margin-left: auto;
+}
+.testimonials .carousel-indicators li {
+  background-color: #022237;
+  text-indent: 0;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #ddd;
+  margin: 5px;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.testimonials .carousel-indicators .active {
+  background-color: #3498db;
+  border-color: #2980b9;
+  width: 80px;
+  height: 80px;
+}
+.testimonials .carousel-indicators li img {
+  max-width: 100%;
+  opacity: .6;
+  border-radius: 50%;
+}
+.testimonials .carousel-indicators li.active img {
+  opacity: 1;
+  background-color: none;
+}
+
+/*
+======================================
+  - Start Price Table Section :
+======================================
+*/
+.price-table {
+  padding-top: 20px;
+  background-color: #fff;
+  padding-bottom: 40px;
+}
+.price-table h1 {
+  color: #555;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 35px;
+}
+.price-table h1 span {
+  color: #2980b9;
+}
+.price-table .price-box {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 3px #DdD;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 25px 0 18px;
+  margin-bottom: 10px;
+  transition: all .8s ease-in-out;
+  font-family: 'Karla', sans-serif;
+}
+.price-table .price-box h3 {
+  margin: 5px 0 15px;
+  font-weight: 900;
+  font-family: 'Raleway', sans-serif;
+}
+.price-table .price-box p {
+  font-size: 35px;
+  font-weight: bolder;
+  border: 1px solid #ddd;
+  color: #555;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 15px auto;
+  padding: 10px;
+  line-height: 78px;
+  font-family: 'Raleway', sans-serif;
+  transition: 0.9s;
+  background-color: #f1f1f1
+}
+.price-table .price-box:hover p {
+  transform: rotate(360deg) scale(1.1, 1.1);
+}
+.price-table .price-box ul {
+  line-height: 250%;
+  font-size: 16px;
+  text-align: left;
+  padding: 0 16px;
+}
+.price-table .price-box ul li:not(:last-of-type) {
+  border-bottom: 1px solid #ddd;
+}
+.price-table .price-box ul li span {
+  float: right !important;
+  font-weight: bold;
+  color: #2e6da4;
+}
+.price-table .price-box button {
+  margin-bottom: 8px;
+  transition: all .4s ease-in-out;
+  border: none;
+  padding: 7px 25px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-family: 'Karla', sans-serif;
+}
+button.btn-primary { background-color: #0088ff; }
+button.btn-info { background-color: #4a86bb; }
+button.btn-warning { background-color: #919920; }
+button.btn-success { background-color: #3d9f37; }
+
+
+/*
+======================================
+  - Start Subscribe Section :
+======================================
+*/
+.subscribe {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f1f1f1;
+}
+.subscribe h1 {
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-size: 55px;
+  text-transform: uppercase;
+}
+.subscribe h1 span {
+  color: #2980b9;
+}
+.subscribe p {
+  font-family: 'Karla', sans-serif;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.subscribe button,
+.subscribe input {
+  border-radius: 0;
+  font-family: 'Karla', sans-serif;
+  transition: 0.5s;
+}
+.subscribe .form-control {
+  margin-right: -10px;
+  width: 65%;
+  border-radius: 3px;
+}
+
+/*
+======================================
+  - Start Stats Section :
+======================================
+*/
+.stats {
+  background: url("../imgs/stats.jpg") fixed center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  background-size: cover;
+  height: 100%;
+  padding: 50px 0;
+  z-index: 1000;
+}
+.stats h1 {
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 55px;
+  color: #FFF;
+  text-transform: uppercase;
+}
+.stats h1 span {
+  color: #2980b9;
+}
+.stats .overlay { z-index: 2 }
+.stats:before {
+  content: "";
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.stats .overlay .stats_main {
+  margin-bottom: 45px;
+  transition: 0.5s;
+  color: #FFF;
+}
+.stats .overlay .stats_main:hover {
+  color: #ddd;
+}
+.stats .overlay .stats_main p {
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+
+/*
+======================================
+  - Start Skills Section :
+======================================
+*/
+.skills {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  font-family: 'Karla', sans-serif;
+}
+.skills h1 {
+  text-transform: uppercase;
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+.skills h1 span {
+  color: #2980b9;
+}
+.skills .progress {
+  height: 35px;
+  border-radius: 5px;
+}
+.skills p {
+  font-size: 18px;
+}
+.skills .progress-bar {
+  text-align: left;
+  line-height: 38px;
+  text-indent: 15px
+}
+.skills button {
+  border: none;
+  padding: 7px 25px;
+  font-family: 'Karla', sans-serif;
+}
+
+/*
+======================================
+  - Start Contact Section :
+======================================
+*/
+.contact {
+  background: url("../imgs/contact-us.jpg") fixed center center no-repeat;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.contact .overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  min-height: 400px;
+  color: #FFF;
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+.contact .overlay h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.contact textarea.form-control {
+  height: 90px;
+  resize: none;
+}
+.contact .form-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #000;
+  transition: 0.6s;
+  font-family: 'Karla', sans-serif;
+  border: none;
+}
+.contact button {
+  border: none;
+  font-family: 'Karla', sans-serif;
+}
+/*
+======================================
+  - Start Footer Section :
+======================================
+*/
+footer {
+  background-color: #333;
+  color: #AAA;
+  padding: 20px;
+  text-align: center;
+}
