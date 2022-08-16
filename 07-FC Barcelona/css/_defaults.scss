@@ -1,0 +1,132 @@
+@import 'vars';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-font;
+  height: 20000px;
+}
+
+
+// Start Owl Slider
+.owl-dots {
+  width: 100px;
+  margin: 10px auto;
+  .owl-dot {
+    span {
+      width: 10px;
+      height: 10px;
+      margin: 4px;
+      background: #DEDEDE;
+      display: block;
+      visibility: visible;
+      transition: opacity .2s ease;
+      border-radius: 30px;
+    }
+    &:hover span {
+      background: #869791;
+    }
+  }
+}
+.owl-dots .owl-dot.active span { background: #869791 }
+// END Owl Slider
+
+// Default Line
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+// Helpers
+.clearfix { clear: both; }
+.color-green { color: $green-d }
+.color-red { color: $red-d }
+.color-orange { color: $red-d }
+.color-blue { color: $blue-d }
+.color-river { color: $river }
+.large-text {  font-size: 30px; }
+
+.text-goldfcb { color: $gold-fcb; }
+.text-redfcb { color: $red-fcb; }
+.text-bluefcb { color: $blue-fcb; }
+.text-pinkfcb { color: $pink-fcb; }
+
+.section-header {
+  font-family: $third-font;
+  font-size: 40px;
+  text-align: center;
+  font-weight: lighter;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  &:first-letter { color: $gold-fcb }
+
+}
+
+section {
+}
+// Buttons
+.btn {
+padding: 10px 20px;
+font-family: $main-font;
+background-color: $blue-fcb;
+color: #FFF;
+border-radius: 3px;
+border: none;
+font-weight: bold;
+margin: 10px 2px;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+&:hover { background-color: #2d5f93; }
+i { margin-right: 5px; }
+}
+.btn-red { background-color: $red-fcb; &:hover { background-color: #a32020; } }
+.btn-outline-red {
+background-color: transparent;
+border: 2px solid $red-fcb;
+&:hover { background-color: $red-fcb; color: #FFF; }
+}
+
+
+// display
+.d-flex {
+  display: flex;
+}
+.jus-center { justify-content: center; } .jus-between { justify-content: space-between; } .jus-around { justify-content: space-around; }
+.align-center { align-items: center; }
+
+// Animations
+@keyframes animateArrow {
+  0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+@keyframes changeBgFromTTB {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: $blue-fcb;
+  }
+}
+
+.animatedBGTTB {
+  animation: changeBgFromTTB .5s ease;
+  background-color: $blue-fcb;
+}
+
